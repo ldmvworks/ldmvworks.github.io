@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Local notes and private material
+*.local
+private/
+secrets/
+*.key
+*.pem
+*.p12

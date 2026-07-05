@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-labelledby="title desc">
+  <title id="title">LDMV Works</title>
+  <desc id="desc">LDMV Worksの簡易ロゴ</desc>
+  <rect width="320" height="120" fill="#ffffff"/>
+  <g fill="none" stroke="#1f5fa8" stroke-width="7" stroke-linecap="square">
+    <path d="M30 34V18h28"/>
+    <path d="M112 102h28V76"/>
+  </g>
+  <path d="M48 32h28c24 0 38 13 38 31s-14 31-38 31H48V32zm28 43c11 0 18-5 18-12s-7-12-18-12h-8v24h8z" fill="#101827"/>
+  <path d="M42 88l27-27 19 19 43-43" fill="none" stroke="#1f5fa8" stroke-width="8" stroke-linecap="square"/>
+  <path d="M102 91l13 22 14-22z" fill="#1f5fa8"/>
+  <rect x="154" y="28" width="3" height="64" fill="#b8c6d8"/>
+  <text x="176" y="70" fill="#101827" font-family="Arial, sans-serif" font-size="32" font-weight="700">LDMV Works</text>
+</svg>
