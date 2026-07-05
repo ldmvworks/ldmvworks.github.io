@@ -338,7 +338,7 @@ h3 {
 .hero-panel {
   padding: 24px;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 8px;
   background: linear-gradient(180deg, rgba(12, 17, 26, 0.88), rgba(8, 12, 19, 0.68));
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
@@ -355,7 +355,7 @@ h3 {
   margin: 22px 0 0;
   overflow: hidden;
   border: 1px solid var(--line-cool);
-  border-radius: 12px;
+  border-radius: 8px;
   background: var(--line-cool);
 }
 
@@ -375,6 +375,13 @@ h3 {
   margin: 4px 0 0;
   color: var(--text);
   font-weight: 800;
+}
+
+.focus-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
 }
 
 .reveal {
@@ -458,7 +465,7 @@ h3 {
   margin-top: 34px;
   padding: 28px;
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(217, 182, 106, 0.12), rgba(13, 20, 32, 0.78)),
     var(--panel-solid);
@@ -547,14 +554,14 @@ h3 {
   inset: -16px;
   z-index: -1;
   border: 1px solid var(--line);
-  border-radius: 26px;
+  border-radius: 8px;
   content: "";
 }
 
 .project-visual img {
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 8px;
   box-shadow: var(--shadow);
 }
 
@@ -564,7 +571,7 @@ h3 {
   margin-top: 34px;
   overflow: hidden;
   border: 1px solid var(--line-cool);
-  border-radius: 14px;
+  border-radius: 8px;
   background: var(--line-cool);
 }
 
@@ -601,7 +608,7 @@ h3 {
   min-height: 240px;
   padding: 28px;
   border: 1px solid var(--line-cool);
-  border-radius: 18px;
+  border-radius: 8px;
   background: var(--panel-solid);
 }
 
@@ -618,7 +625,7 @@ h3 {
   gap: 52px;
   padding: 42px;
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 8px;
   background: rgba(12, 17, 26, 0.78);
   box-shadow: var(--shadow);
 }
@@ -642,7 +649,7 @@ h3 {
   gap: 1px;
   overflow: hidden;
   border: 1px solid var(--line-cool);
-  border-radius: 16px;
+  border-radius: 8px;
   background: var(--line-cool);
 }
 
@@ -667,7 +674,7 @@ h3 {
   margin: 14px 0 0;
   overflow: hidden;
   border: 1px solid var(--line-cool);
-  border-radius: 14px;
+  border-radius: 8px;
   background: var(--line-cool);
 }
 
@@ -714,6 +721,11 @@ h3 {
 .footer-inner p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+.footer-tagline {
+  color: var(--gold-2);
+  font-weight: 800;
 }
 
 @keyframes revealUp {
@@ -873,7 +885,7 @@ h3 {
 
   .contact-card {
     padding: 24px;
-    border-radius: 18px;
+    border-radius: 8px;
   }
 
   .footer-inner {
