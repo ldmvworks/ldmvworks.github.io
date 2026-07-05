@@ -10,7 +10,6 @@
   --gold-2: #f2d48a;
   --line: rgba(217, 182, 106, 0.26);
   --line-cool: rgba(151, 168, 197, 0.18);
-  --blue: #7fa7ef;
   --container: 1140px;
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.48);
 }
@@ -45,15 +44,15 @@ body {
 }
 
 .en {
-  display: none;
+  display: none !important;
 }
 
 .language-toggle-input:checked ~ .site-shell .ja {
-  display: none;
+  display: none !important;
 }
 
 .language-toggle-input:checked ~ .site-shell .en {
-  display: inline;
+  display: inline !important;
 }
 
 img {
@@ -116,6 +115,34 @@ a {
   letter-spacing: 0;
 }
 
+.site-nav a {
+  position: relative;
+  text-decoration: none;
+}
+
+.site-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--gold-2);
+  content: "";
+  transition: transform 180ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--text);
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
 .language-switch {
   display: inline-flex;
   align-items: center;
@@ -163,34 +190,6 @@ a {
   color: var(--gold-2);
 }
 
-.site-nav a {
-  position: relative;
-  text-decoration: none;
-}
-
-.site-nav a::after {
-  position: absolute;
-  right: 0;
-  bottom: -8px;
-  left: 0;
-  height: 1px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: var(--gold-2);
-  content: "";
-  transition: transform 180ms ease;
-}
-
-.site-nav a:hover,
-.site-nav a:focus-visible {
-  color: var(--text);
-}
-
-.site-nav a:hover::after,
-.site-nav a:focus-visible::after {
-  transform: scaleX(1);
-}
-
 .hero {
   position: relative;
   min-height: 100svh;
@@ -230,9 +229,17 @@ a {
   padding: 150px 0 86px;
 }
 
+.hero-copy,
+.hero-panel,
+.section-heading,
+.section-body,
+.project-copy,
+.project-visual {
+  min-width: 0;
+}
+
 .hero-copy {
   max-width: 810px;
-  min-width: 0;
 }
 
 .eyebrow,
@@ -254,9 +261,9 @@ h3 {
 }
 
 h1 {
+  max-width: 900px;
   margin-top: 18px;
   font-size: clamp(3rem, 6vw, 5.4rem);
-  max-width: 900px;
   overflow-wrap: anywhere;
 }
 
@@ -265,7 +272,7 @@ h1 span {
 }
 
 .language-toggle-input:checked ~ .site-shell h1 .en {
-  display: block;
+  display: block !important;
 }
 
 h2 {
@@ -292,7 +299,8 @@ h3 {
   margin-top: 34px;
 }
 
-.button {
+.button,
+.mail-link {
   display: inline-flex;
   min-height: 50px;
   align-items: center;
@@ -308,7 +316,9 @@ h3 {
 }
 
 .button:hover,
-.button:focus-visible {
+.button:focus-visible,
+.mail-link:hover,
+.mail-link:focus-visible {
   transform: translateY(-2px);
   background: var(--gold-2);
   border-color: var(--gold-2);
@@ -326,7 +336,6 @@ h3 {
 }
 
 .hero-panel {
-  min-width: 0;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -417,17 +426,16 @@ h3 {
   padding: 108px 0;
 }
 
-.section-grid {
+.section-grid,
+.section-topline {
   display: grid;
   grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
   gap: 64px;
 }
 
-.section-heading,
-.section-body,
-.project-copy,
-.project-visual {
-  min-width: 0;
+.section-topline {
+  align-items: end;
+  margin-bottom: 38px;
 }
 
 .large-text {
@@ -439,18 +447,31 @@ h3 {
 
 .section-body p:not(.large-text),
 .section-topline > p,
-.project-copy p {
+.project-copy p,
+.contact-intro p {
   margin: 24px 0 0;
   color: var(--muted);
   font-size: 1.02rem;
 }
 
-.section-topline {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.74fr) minmax(0, 1.26fr);
-  gap: 64px;
-  align-items: end;
-  margin-bottom: 38px;
+.vision-card {
+  margin-top: 34px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(217, 182, 106, 0.12), rgba(13, 20, 32, 0.78)),
+    var(--panel-solid);
+}
+
+.vision-card h3 {
+  margin-top: 10px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.vision-card p:last-child {
+  margin: 18px 0 0;
+  color: #dbe2ee;
 }
 
 .works-section {
@@ -482,16 +503,22 @@ h3 {
 }
 
 .work-card span,
-.process-list span {
+.process-list span,
+.inquiry-list span {
   display: inline-block;
-  margin-bottom: 44px;
   color: var(--gold-2);
   font-size: 0.82rem;
   font-weight: 900;
 }
 
+.work-card span,
+.process-list span {
+  margin-bottom: 44px;
+}
+
 .work-card p,
-.process-list p {
+.process-list p,
+.inquiry-list p {
   margin: 18px 0 0;
   color: var(--muted);
   font-size: 0.95rem;
@@ -587,7 +614,7 @@ h3 {
 
 .contact-card {
   display: grid;
-  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
   gap: 52px;
   padding: 42px;
   border: 1px solid var(--line);
@@ -596,10 +623,48 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.contact-intro h2 {
+  margin-top: 10px;
+}
+
+.mail-link {
+  margin-top: 28px;
+}
+
+.contact-details {
+  display: grid;
+  gap: 28px;
+}
+
+.inquiry-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line-cool);
+  border-radius: 16px;
+  background: var(--line-cool);
+}
+
+.inquiry-list div {
+  min-height: 144px;
+  padding: 22px;
+  background: rgba(7, 11, 18, 0.82);
+}
+
+.inquiry-list p {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.profile-block {
+  padding-top: 8px;
+}
+
 .profile-list {
   display: grid;
   gap: 1px;
-  margin: 0;
+  margin: 14px 0 0;
   overflow: hidden;
   border: 1px solid var(--line-cool);
   border-radius: 14px;
@@ -726,7 +791,8 @@ h3 {
     gap: 34px;
   }
 
-  .work-grid {
+  .work-grid,
+  .inquiry-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -781,7 +847,8 @@ h3 {
     flex-direction: column;
   }
 
-  .button {
+  .button,
+  .mail-link {
     width: 100%;
   }
 
@@ -789,7 +856,8 @@ h3 {
     padding: 72px 0;
   }
 
-  .work-grid {
+  .work-grid,
+  .inquiry-list {
     grid-template-columns: 1fr;
   }
 
@@ -881,7 +949,8 @@ h3 {
 
   .work-grid,
   .profile-list,
-  .spec-list {
+  .spec-list,
+  .inquiry-list {
     display: block;
     border: 1px solid #999999;
   }
@@ -891,7 +960,9 @@ h3 {
   .process-list li,
   .contact-card,
   .profile-list div,
-  .spec-list div {
+  .spec-list div,
+  .inquiry-list div,
+  .vision-card {
     border: 1px solid #999999;
     background: #ffffff;
     box-shadow: none;
