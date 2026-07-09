@@ -3,6 +3,8 @@
 LDMV Works の一般公開用ホームページです。
 PC向けインディーゲームを企画・開発する個人スタジオの公式ページとして、GitHub Pagesで公開することを想定しています。
 
+同じ内容をCodexのSitesでも公開できる構成です。GitHub Pages用の`index.html`を正本として利用するため、本文を二重に管理する必要はありません。
+
 ## サイト構成
 
 - `index.html`: 1ページ構成のトップページ
@@ -11,12 +13,39 @@ PC向けインディーゲームを企画・開発する個人スタジオの公
 - `assets/logo.png`: 黒背景用のLDMV Worksロゴ画像
 - `assets/title-menu-ja.png`: 開発中タイトルの画面スクリーンショット
 - `.nojekyll`: GitHub PagesでJekyll処理を無効化するためのファイル
+- `app/`, `worker/`, `vite.config.ts`: Sites公開用の実行構成
+- `.openai/hosting.json`: Sitesの公開先を識別する設定
+- `public/og.png`: Sitesで共有した際のプレビュー画像
 
 ## 表示言語
 
 標準表示は日本語です。
 ヘッダー右側の `JP / EN` スイッチで英語表示に切り替えられます。
 切り替えはCSSだけで実装しており、JavaScriptは使用していません。
+
+Sites側には公開基盤としてReact/Vinextの構成がありますが、ページ内の言語切り替えやスライド表示は従来どおりHTML/CSSのみです。
+
+## Sitesでの確認
+
+1. 依存関係をインストールする。
+
+   ```powershell
+   npm install
+   ```
+
+2. ローカル表示を起動する。
+
+   ```powershell
+   npm run dev
+   ```
+
+3. 公開前のビルドを確認する。
+
+   ```powershell
+   npm run build
+   ```
+
+Sitesへの公開はCodex上のSites機能から行います。`.openai/hosting.json`の`project_id`は公開先との紐付けに使うため、追加後は削除・書き換えをしないでください。
 
 ## 公開手順
 

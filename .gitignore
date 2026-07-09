@@ -13,3 +13,14 @@ secrets/
 *.key
 *.pem
 *.p12
+
+# Sites build and local development
+node_modules/
+.next/
+.vinext/
+dist/
+.wrangler/
+public/assets/
+next-env.d.ts
+npm-debug.log*
+.env*
