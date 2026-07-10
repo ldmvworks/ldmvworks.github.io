@@ -21,6 +21,9 @@ node_modules/
 dist/
 .wrangler/
 public/assets/
+public/misasa-demo/
 next-env.d.ts
 npm-debug.log*
 .env*
+tmp/
+output/
