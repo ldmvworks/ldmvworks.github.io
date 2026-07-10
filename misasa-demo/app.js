@@ -55,7 +55,8 @@ function setupAuth() {
     return;
   }
 
-  if (!hasAccess()) {
+  const isLocalPreview = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+  if (!hasAccess() && !isLocalPreview) {
     window.location.replace(new URL("../", window.location.href));
   } else {
     document.documentElement.classList.add("access-ok");
@@ -135,6 +136,22 @@ function setupInteractions() {
         activateConcept(button.dataset.concept, { updateUrl: true, scroll: true });
       });
     });
+  }
+
+  const revealItems = [...document.querySelectorAll("[data-reveal]")];
+  if (revealItems.length && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("reveal-ready");
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-revealed");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -8%", threshold: 0.08 },
+    );
+    revealItems.forEach((item) => revealObserver.observe(item));
   }
 
   const toast = document.querySelector("[data-toast]");
