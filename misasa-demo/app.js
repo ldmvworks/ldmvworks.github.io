@@ -98,6 +98,45 @@ function setupInteractions() {
     });
   });
 
+  const conceptRoot = document.querySelector("[data-top-concepts]");
+  if (conceptRoot) {
+    const buttons = [...conceptRoot.querySelectorAll("[data-concept]")];
+    const panels = [...conceptRoot.querySelectorAll("[data-concept-panel]")];
+    const validConcepts = buttons.map((button) => button.dataset.concept);
+    const themeColors = { blue: "#0d5e91", orange: "#dd6f2e", green: "#173f35" };
+
+    const activateConcept = (concept, { updateUrl = false, scroll = false } = {}) => {
+      if (!validConcepts.includes(concept)) return;
+      buttons.forEach((button) => {
+        button.setAttribute("aria-selected", String(button.dataset.concept === concept));
+      });
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.conceptPanel !== concept;
+      });
+      document.body.dataset.activeConcept = concept;
+      document.querySelector("meta[name='theme-color']")?.setAttribute("content", themeColors[concept]);
+      localStorage.setItem("misasa_top_concept", concept);
+
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        url.searchParams.set("design", concept);
+        url.hash = "";
+        history.replaceState(null, "", url);
+      }
+      if (scroll) window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const requested = new URLSearchParams(window.location.search).get("design");
+    const stored = localStorage.getItem("misasa_top_concept");
+    activateConcept(validConcepts.includes(requested) ? requested : validConcepts.includes(stored) ? stored : "blue");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activateConcept(button.dataset.concept, { updateUrl: true, scroll: true });
+      });
+    });
+  }
+
   const toast = document.querySelector("[data-toast]");
   document.querySelectorAll("[data-demo-action]").forEach((button) => {
     button.addEventListener("click", (event) => {

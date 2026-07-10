@@ -4,117 +4,213 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow, noarchive">
-    <meta name="theme-color" content="#174f47">
-    <title>病院総合トップ | 三朝温泉病院 Web提案デモ</title>
+    <meta name="theme-color" content="#0d5e91">
+    <title>病院総合トップ 3デザイン | 三朝温泉病院 Web提案デモ</title>
     <link rel="stylesheet" href="../shared.css">
   </head>
-  <body data-page="demo-01">
+  <body class="top-concepts" data-page="demo-01">
     <a class="skip-link" href="#main">本文へ移動</a>
     <div class="demo-topline">
       <div class="container demo-topline-inner">
-        <p><strong>DEMO 01</strong>　病院総合トップ</p>
+        <p><strong>DEMO 01</strong>　病院総合トップ・3デザイン比較</p>
         <p>非公式・提案用デモ　 <a href="../">6つのデモ一覧へ</a></p>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container site-header-inner">
-        <a class="site-brand" href="#top" aria-label="三朝温泉病院 デモトップ">
-          <span class="site-logo" aria-hidden="true">湯</span>
-          <span class="site-brand-text"><strong>三朝温泉病院</strong><small>MISASA ONSEN HOSPITAL</small></span>
-        </a>
-        <nav class="site-nav" aria-label="主要ナビゲーション">
-          <a href="#outpatient">外来受診</a>
-          <a href="#features">当院の特色</a>
-          <a href="#news">お知らせ</a>
-          <a href="#access">交通アクセス</a>
-        </nav>
-        <div class="header-tools">
-          <button class="header-tool" type="button" data-font-size aria-pressed="false">文字<br>拡大</button>
-          <a class="button" href="#" data-demo-action="本番では予約・お問い合わせページへ接続できます。">予約・お問い合わせ</a>
+
+    <div data-top-concepts>
+      <div class="concept-switcher" aria-label="トップページのデザインを切り替える">
+        <div class="container concept-switcher-inner">
+          <div class="concept-switcher-title">
+            <small>TOP DESIGN</small>
+            <strong>3案を切り替えて比較</strong>
+          </div>
+          <div class="concept-tabs" role="tablist" aria-label="デザイン案">
+            <button class="concept-tab concept-tab--blue" type="button" role="tab" aria-selected="true" aria-controls="concept-blue" data-concept="blue">
+              <span class="concept-swatch" aria-hidden="true"></span><span><b>01 BLUE</b><small>情報整理型</small></span>
+            </button>
+            <button class="concept-tab concept-tab--orange" type="button" role="tab" aria-selected="false" aria-controls="concept-orange" data-concept="orange">
+              <span class="concept-swatch" aria-hidden="true"></span><span><b>02 ORANGE</b><small>写真・体験型</small></span>
+            </button>
+            <button class="concept-tab concept-tab--green" type="button" role="tab" aria-selected="false" aria-controls="concept-green" data-concept="green">
+              <span class="concept-swatch" aria-hidden="true"></span><span><b>03 GREEN</b><small>スタイリッシュ型</small></span>
+            </button>
+          </div>
+          <a class="concept-back" href="../">デモ一覧へ</a>
         </div>
       </div>
-    </header>
-    <nav class="mobile-demo-nav" aria-label="ページ内ナビゲーション">
-      <a href="#outpatient">外来受診</a><a href="#features">当院の特色</a><a href="#news">お知らせ</a><a href="#access">アクセス</a>
-    </nav>
 
-    <main id="main">
-      <section class="home-hero" id="top">
-        <div class="container home-hero-inner">
-          <div>
-            <p class="eyebrow">Care rooted in Misasa</p>
-            <h1 class="display">回復の先に、<span>その人らしい日常を。</span></h1>
-            <p class="lead">医療、リハビリテーション、そして三朝の温泉資源。多職種のチームで、治療から在宅復帰まで一人ひとりに寄り添います。</p>
-            <div class="hero-actions">
-              <a class="button" href="#outpatient">受診される方へ <span class="arrow">→</span></a>
-              <a class="button button--ghost" href="#features">当院の特色を見る</a>
+      <main id="main">
+        <section class="concept concept--blue" id="concept-blue" role="tabpanel" data-concept-panel="blue" tabindex="0">
+          <header class="blue-header">
+            <div class="container blue-header-inner">
+              <a class="blue-brand" href="#blue-top" aria-label="三朝温泉病院 ブルーデザイントップ">
+                <span class="blue-logo" aria-hidden="true">湯</span>
+                <span><strong>三朝温泉病院</strong><small>MISASA ONSEN HOSPITAL</small></span>
+              </a>
+              <nav class="blue-nav" aria-label="ブルー案の主要ナビゲーション">
+                <a href="#blue-routes">受診・入院</a><a href="#blue-routes">診療科・部門</a><a href="#blue-news">病院について</a><a href="#blue-contact">交通アクセス</a>
+              </nav>
+              <div class="blue-tools"><button type="button" data-font-size aria-pressed="false">文字を拡大</button><a href="#blue-contact">お問い合わせ</a></div>
             </div>
-          </div>
-          <div class="hero-art" aria-label="三朝の自然に包まれた病院を抽象的に表したイメージ">
-            <span class="hero-sun"></span>
-            <span class="hero-building"></span>
-          </div>
-        </div>
-      </section>
+          </header>
 
-      <div class="container quick-links" id="outpatient" aria-label="目的別案内">
-        <a class="quick-link" href="../demo-02/"><small>OUTPATIENT</small><strong>外来を受診する</strong><span>初診・再診のご案内 →</span></a>
-        <a class="quick-link" href="../demo-04/"><small>HOSPITALIZATION</small><strong>入院・お見舞い</strong><span>準備と手続き →</span></a>
-        <a class="quick-link" href="../demo-03/"><small>REHABILITATION</small><strong>リハビリを知る</strong><span>温泉を活かした支援 →</span></a>
-        <a class="quick-link" href="../demo-05/"><small>RECRUIT</small><strong>一緒に働く</strong><span>採用情報 →</span></a>
-      </div>
+          <div class="blue-alert">
+            <div class="container blue-alert-inner"><strong>重要なお知らせ</strong><a href="#blue-news">休診・代診、面会についての最新情報はこちら <span>→</span></a></div>
+          </div>
 
-      <section class="section" id="features">
-        <div class="container">
-          <div class="section-head">
-            <div><p class="eyebrow">Our strengths</p><h2 class="section-title">三朝温泉病院、3つの特色</h2></div>
-            <p>病院独自の価値を、専門用語に頼りすぎず、患者さま・ご家族が理解しやすい言葉で伝えます。</p>
-          </div>
-          <div class="feature-grid">
-            <article class="feature-card"><span class="number">01</span><h3>温泉資源を活かした<br>リハビリテーション</h3><p>病院が所有する温泉源を活用し、掛け流しの浴室や運動療法温泉プールをリハビリテーションに役立てています。</p></article>
-            <article class="feature-card"><span class="number">02</span><h3>多職種で支える<br>チーム医療</h3><p>医師・看護師・リハビリスタッフなどが連携し、入院から退院、その先の暮らしまでを一緒に考えます。</p></article>
-            <article class="feature-card"><span class="number">03</span><h3>地域につなぐ<br>切れ目のない支援</h3><p>地域の医療・介護機関と連携し、訪問看護や在宅リハビリを通して、住み慣れた場所での生活を支えます。</p></article>
-          </div>
-        </div>
-      </section>
+          <section class="blue-hero" id="blue-top">
+            <div class="container blue-hero-grid">
+              <div class="blue-hero-copy">
+                <p class="blue-kicker">必要な情報へ、まっすぐに。</p>
+                <h1>安心して、<br>次の一歩へ。</h1>
+                <p>外来受診、入院、リハビリ、地域連携。患者さま・ご家族が迷わず必要な情報へ進める、整理された病院サイト。</p>
+                <div class="blue-search" role="search">
+                  <span aria-hidden="true">⌕</span><span>サイト内から情報を探す</span><button type="button" data-demo-action="本番では診療科・医師名・症状・手続きなどを検索できます。">検索</button>
+                </div>
+              </div>
+              <aside class="blue-today" aria-label="本日のご案内・表示例">
+                <div class="blue-today-head"><span><i></i>本日のご案内</span><small>表示例</small></div>
+                <a href="#" data-demo-action="最新の休診・代診情報へ接続できます。"><span>外来診療</span><strong>休診・代診情報</strong><b>→</b></a>
+                <a href="#" data-demo-action="最新の面会時間と受付方法へ接続できます。"><span>入院・面会</span><strong>面会方法を確認</strong><b>→</b></a>
+                <a href="#blue-contact"><span>アクセス</span><strong>駐車場・交通案内</strong><b>→</b></a>
+                <p>掲載内容は画面イメージです。実際の情報は公式発表をご確認ください。</p>
+              </aside>
+            </div>
+          </section>
 
-      <section class="section section--tint" id="news">
-        <div class="container">
-          <div class="section-head">
-            <div><p class="eyebrow">Information</p><h2 class="section-title">大切なお知らせ</h2></div>
-            <p>部署ごとに更新でき、重要度や対象者で見つけやすく分類する運用を想定しています。</p>
-          </div>
-          <div class="notice-list">
-            <a class="notice-item" href="#" data-demo-action="本番では詳細なお知らせ記事を表示できます。"><time datetime="2026-07-08">2026.07.08</time><span class="notice-tag">外来</span><strong>休診・代診情報を更新しました</strong><span>→</span></a>
-            <a class="notice-item" href="#" data-demo-action="本番では採用情報の詳細と応募導線を表示できます。"><time datetime="2026-07-01">2026.07.01</time><span class="notice-tag">採用</span><strong>医療スタッフ採用情報のお知らせ</strong><span>→</span></a>
-            <a class="notice-item" href="#" data-demo-action="本番では地域向けのお知らせ記事を表示できます。"><time datetime="2026-06-25">2026.06.25</time><span class="notice-tag">地域</span><strong>地域のみなさまへ 健康講座のご案内</strong><span>→</span></a>
-          </div>
-        </div>
-      </section>
+          <section class="blue-routes" id="blue-routes">
+            <div class="container">
+              <div class="blue-section-head"><div><small>QUICK ACCESS</small><h2>目的から探す</h2></div><p>よく利用されるページを、利用者の行動順に並べます。</p></div>
+              <div class="blue-route-grid">
+                <a class="blue-route blue-route--primary" href="../demo-02/"><span class="blue-route-num">01</span><small>OUTPATIENT</small><h3>外来を受診する</h3><p>初診・再診、診療予定、持ち物</p><b>外来案内へ →</b></a>
+                <a class="blue-route blue-route--primary" href="../demo-04/"><span class="blue-route-num">02</span><small>HOSPITALIZATION</small><h3>入院・面会</h3><p>入院準備、病棟、退院支援</p><b>入院案内へ →</b></a>
+                <a class="blue-route" href="../demo-03/"><span class="blue-route-num">03</span><small>REHABILITATION</small><h3>リハビリを知る</h3><p>温泉活用、多職種チーム</p><b>特色を見る →</b></a>
+                <a class="blue-route" href="../demo-06/"><span class="blue-route-num">04</span><small>MEDICAL PARTNERS</small><h3>医療・介護関係者</h3><p>紹介、相談、様式ダウンロード</p><b>地域連携へ →</b></a>
+                <a class="blue-route" href="../demo-05/"><span class="blue-route-num">05</span><small>RECRUIT</small><h3>採用情報</h3><p>仕事、働く人、募集職種</p><b>採用サイトへ →</b></a>
+                <a class="blue-route" href="#blue-news"><span class="blue-route-num">06</span><small>ABOUT US</small><h3>病院を知る</h3><p>理念、概要、診療科・部門</p><b>病院紹介へ →</b></a>
+              </div>
+            </div>
+          </section>
 
-      <section class="section section--white" id="access">
-        <div class="container">
-          <div class="section-head">
-            <div><p class="eyebrow">Access & contact</p><h2 class="section-title">来院前の確認も、迷わず。</h2></div>
-            <a class="button" href="#" data-demo-action="本番では地図アプリと経路案内を表示できます。">交通アクセスを見る</a>
-          </div>
-          <div class="info-strip">
-            <div><small>所在地</small><strong>鳥取県東伯郡三朝町山田690</strong></div>
-            <div><small>病院代表</small><strong>0858-43-1321</strong></div>
-            <div><small>受診について</small><strong>来院前に最新情報をご確認ください</strong></div>
-          </div>
-        </div>
-      </section>
-    </main>
+          <section class="blue-news" id="blue-news">
+            <div class="container blue-news-grid">
+              <div><small>INFORMATION</small><h2>お知らせ</h2><p>重要度・対象者・診療科で絞り込める情報設計を想定しています。</p></div>
+              <div class="blue-news-list">
+                <a href="#" data-demo-action="本番では詳細なお知らせ記事を表示できます。"><time>2026.07.08</time><span>外来</span><strong>休診・代診情報を更新しました</strong><b>→</b></a>
+                <a href="#" data-demo-action="本番では詳細なお知らせ記事を表示できます。"><time>2026.07.01</time><span>採用</span><strong>医療スタッフ採用情報のお知らせ</strong><b>→</b></a>
+                <a href="#" data-demo-action="本番では詳細なお知らせ記事を表示できます。"><time>2026.06.25</time><span>地域</span><strong>地域のみなさまへ 健康講座のご案内</strong><b>→</b></a>
+              </div>
+            </div>
+          </section>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><h3>三朝温泉病院</h3><p>〒682-0197 鳥取県東伯郡三朝町山田690<br>TEL 0858-43-1321（代表）</p></div>
-        <div><h3>受診される方へ</h3><a href="../demo-02/">外来受診のご案内</a><a href="../demo-04/">入院・退院のご案内</a></div>
-        <div><h3>病院について</h3><a href="../demo-03/">温泉リハビリ</a><a href="../demo-05/">採用情報</a></div>
-      </div>
-      <div class="container footer-bottom">非公式・営業提案用デモです。実際の診療案内は病院公式情報をご確認ください。</div>
-    </footer>
+          <section class="blue-contact" id="blue-contact">
+            <div class="container blue-contact-inner"><div><small>ACCESS & CONTACT</small><h2>来院前の確認も、迷わず。</h2></div><div><span>所在地</span><strong>鳥取県東伯郡三朝町山田690</strong></div><div><span>病院代表</span><strong>0858-43-1321</strong></div></div>
+          </section>
+          <footer class="concept-footer concept-footer--blue"><div class="container"><strong>三朝温泉病院</strong><span>非公式・営業提案用デモ / BLUE INFORMATION DESIGN</span></div></footer>
+        </section>
+
+        <section class="concept concept--orange" id="concept-orange" role="tabpanel" data-concept-panel="orange" tabindex="0" hidden>
+          <section class="orange-hero" id="orange-top">
+            <header class="orange-header">
+              <div class="container orange-header-inner">
+                <a class="orange-brand" href="#orange-top"><span aria-hidden="true">湯</span><strong>三朝温泉病院</strong></a>
+                <nav aria-label="オレンジ案の主要ナビゲーション"><a href="#orange-story">私たちについて</a><a href="#orange-routes">受診・入院</a><a href="#orange-news">お知らせ</a></nav>
+                <a class="orange-contact" href="#orange-routes">受診案内 <span>→</span></a>
+              </div>
+            </header>
+            <div class="orange-orbit orange-orbit--one" aria-hidden="true"></div><div class="orange-orbit orange-orbit--two" aria-hidden="true"></div>
+            <div class="container orange-hero-grid">
+              <div class="orange-hero-copy">
+                <p>ONSEN × CARE × COMMUNITY</p>
+                <h1>温泉のまちで、<br><em>また歩き出す。</em></h1>
+                <div class="orange-hero-foot"><span>三朝の温泉資源とチーム医療で、<br>回復の先にある暮らしを支えます。</span><a href="../demo-03/">私たちの特色 <b>↗</b></a></div>
+              </div>
+              <div class="orange-photo-stack" aria-label="三朝の自然と病院を表した提案ビジュアル">
+                <div class="orange-photo-main"></div>
+                <div class="orange-photo-note"><small>01 / REHABILITATION</small><strong>人の力と、場所の力。</strong></div>
+                <div class="orange-round-word" aria-hidden="true">MISASA</div>
+              </div>
+            </div>
+            <div class="orange-ticker" aria-hidden="true"><div>ONSEN　/　REHABILITATION　/　COMMUNITY CARE　/　LIFE AFTER RECOVERY　/　ONSEN　/　REHABILITATION　/　COMMUNITY CARE　/</div></div>
+          </section>
+
+          <section class="orange-story" id="orange-story">
+            <div class="container orange-story-head"><div><small>OUR STORIES</small><h2>三朝だから、できること。</h2></div><p>病院の特色を写真とストーリーで伝え、興味から詳細ページへ自然につなぎます。</p></div>
+            <div class="container orange-story-grid">
+              <a class="orange-story-card orange-story-card--large" href="../demo-03/"><span class="orange-card-photo orange-card-photo--one"></span><small>STORY 01</small><h3>温泉を活かした<br>リハビリテーション</h3><p>三朝の自然と温泉資源を、回復への力に。</p><b>READ MORE ↗</b></a>
+              <a class="orange-story-card" href="../demo-04/"><span class="orange-card-photo orange-card-photo--two"></span><small>STORY 02</small><h3>暮らしへ戻るまで<br>チームで伴走する</h3><p>入院前から退院後まで、切れ目のない支援。</p><b>READ MORE ↗</b></a>
+              <a class="orange-story-card" href="../demo-05/"><span class="orange-card-photo orange-card-photo--three"></span><small>STORY 03</small><h3>この地域で、<br>一緒に働く</h3><p>人を支える人が、いきいき働ける場所へ。</p><b>READ MORE ↗</b></a>
+            </div>
+          </section>
+
+          <section class="orange-routes" id="orange-routes">
+            <div class="container orange-route-shell">
+              <div class="orange-route-title"><small>FIND YOUR WAY</small><h2>あなたの目的は？</h2><p>今の状況から、必要なページへ。</p></div>
+              <div class="orange-route-list">
+                <a href="../demo-02/"><span>01</span><strong>外来を受診したい</strong><small>初診・再診・外来予定</small><b>→</b></a>
+                <a href="../demo-04/"><span>02</span><strong>入院・面会について</strong><small>準備・病棟・退院支援</small><b>→</b></a>
+                <a href="../demo-03/"><span>03</span><strong>リハビリを知りたい</strong><small>温泉活用・チーム体制</small><b>→</b></a>
+                <a href="../demo-06/"><span>04</span><strong>医療・介護関係者の方</strong><small>紹介・相談・様式</small><b>→</b></a>
+                <a href="../demo-05/"><span>05</span><strong>一緒に働きたい</strong><small>職場・人・募集職種</small><b>→</b></a>
+              </div>
+            </div>
+          </section>
+
+          <section class="orange-news" id="orange-news">
+            <div class="container orange-news-inner"><div><small>NEWS</small><h2>病院からのお知らせ</h2></div><a href="#" data-demo-action="本番では重要なお知らせ記事へ接続できます。"><time>2026.07.08</time><span>外来</span><strong>休診・代診情報を更新しました</strong><b>→</b></a><a href="#" data-demo-action="本番では採用情報へ接続できます。"><time>2026.07.01</time><span>採用</span><strong>医療スタッフ採用情報のお知らせ</strong><b>→</b></a></div>
+          </section>
+          <footer class="concept-footer concept-footer--orange"><div class="container"><strong>三朝温泉病院</strong><span>非公式・営業提案用デモ / ORANGE EXPERIENCE DESIGN</span></div></footer>
+        </section>
+
+        <section class="concept concept--green" id="concept-green" role="tabpanel" data-concept-panel="green" tabindex="0" hidden>
+          <header class="green-header">
+            <div class="container green-header-inner">
+              <a class="green-brand" href="#green-top"><span>MOH</span><strong>三朝温泉病院</strong></a>
+              <nav aria-label="グリーン案の主要ナビゲーション"><a href="#green-routes">VISIT</a><a href="#green-vision">ABOUT</a><a href="../demo-05/">CAREERS</a><a href="../demo-06/">PARTNERS</a></nav>
+              <a class="green-menu" href="#green-routes">MENU <i></i></a>
+            </div>
+          </header>
+
+          <section class="green-hero" id="green-top">
+            <div class="container green-hero-grid">
+              <div class="green-hero-index"><span>WEB RENEWAL<br>CONCEPT 03</span><b>35.4087° N<br>133.8944° E</b></div>
+              <div class="green-hero-copy">
+                <p>CARE FOR LIFE,<br>ROOTED IN MISASA.</p>
+                <h1>治す。その先の<br><em>暮らしを支える。</em></h1>
+              </div>
+              <div class="green-hero-aside"><span class="green-stamp">湯<br><small>MISASA</small></span><p>医療とリハビリテーション、温泉資源、地域との連携。一人ひとりの「その人らしい日常」へ。</p><a href="#green-routes">EXPLORE <b>↓</b></a></div>
+            </div>
+            <div class="green-marquee" aria-hidden="true">MEDICAL CARE — REHABILITATION — COMMUNITY — MEDICAL CARE — REHABILITATION — COMMUNITY —</div>
+          </section>
+
+          <section class="green-routes" id="green-routes">
+            <div class="container">
+              <div class="green-section-label"><span>01</span><small>NAVIGATION</small></div>
+              <div class="green-routes-head"><h2>WHO ARE<br>YOU HERE FOR?</h2><p>見る人を起点に情報を分け、最短の導線をつくります。</p></div>
+              <div class="green-route-board">
+                <article class="green-audience"><span>FOR PATIENTS</span><h3>患者さま・ご家族</h3><div><a href="../demo-02/">外来受診 <b>↗</b></a><a href="../demo-04/">入院・退院支援 <b>↗</b></a><a href="../demo-03/">リハビリ <b>↗</b></a></div></article>
+                <article class="green-audience green-audience--dark"><span>FOR PARTNERS</span><h3>医療・介護関係者</h3><div><a href="../demo-06/">患者紹介・入院相談 <b>↗</b></a><a href="../demo-06/#documents">様式ダウンロード <b>↗</b></a><a href="../demo-06/#updates">連携ニュース <b>↗</b></a></div></article>
+                <article class="green-audience green-audience--lime"><span>FOR CAREERS</span><h3>未来の仲間</h3><div><a href="../demo-05/">働く人・職場 <b>↗</b></a><a href="../demo-05/#jobs">募集職種 <b>↗</b></a><a href="../demo-05/#environment">働く環境 <b>↗</b></a></div></article>
+              </div>
+            </div>
+          </section>
+
+          <section class="green-vision" id="green-vision">
+            <div class="container">
+              <div class="green-section-label"><span>02</span><small>OUR ROLE</small></div>
+              <div class="green-vision-grid"><div><p>FROM HOSPITAL<br>TO HOME.</p><h2>病院から、<br>暮らしへ。</h2></div><div class="green-vision-copy"><p>私たちが支えるのは、治療の時間だけではありません。入院から退院、地域での生活まで。多職種がつながり、回復の先を一緒に考えます。</p><a href="../demo-04/">入院・退院支援を見る <b>→</b></a></div><div class="green-metric"><strong>5</strong><span>病院所有の<br>温泉源</span></div></div>
+            </div>
+          </section>
+
+          <section class="green-info">
+            <div class="container green-info-grid"><div><span>03</span><small>INFORMATION</small><h2>大切なお知らせ</h2></div><div><a href="#" data-demo-action="本番では詳細なお知らせ記事へ接続できます。"><time>2026.07.08</time><strong>休診・代診情報を更新しました</strong><b>↗</b></a><a href="#" data-demo-action="本番では詳細なお知らせ記事へ接続できます。"><time>2026.07.01</time><strong>医療スタッフ採用情報のお知らせ</strong><b>↗</b></a></div></div>
+          </section>
+
+          <footer class="green-footer"><div class="container green-footer-grid"><div><strong>三朝温泉病院</strong><p>〒682-0197 鳥取県東伯郡三朝町山田690<br>TEL 0858-43-1321</p></div><div><span>CONTACT</span><a href="#" data-demo-action="本番ではお問い合わせページへ接続できます。">お問い合わせ ↗</a><a href="#" data-demo-action="本番では地図・経路案内へ接続できます。">交通アクセス ↗</a></div><small>非公式・営業提案用デモ<br>GREEN EDITORIAL DESIGN</small></div></footer>
+        </section>
+      </main>
+    </div>
+
     <a class="demo-switcher" href="../"><span>6</span><span>つのデモ一覧</span></a>
     <div class="toast" data-toast role="status" aria-live="polite"></div>
     <script src="../app.js"></script>
