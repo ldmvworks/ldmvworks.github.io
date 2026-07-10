@@ -1,5 +1,7 @@
 # LDMV Works Homepage
 
+> **公開先は GitHub Pages (`https://ldmvworks.github.io/`) のみです。OpenAI Sites / `chatgpt.site` は使用しません。**
+
 LDMV Works の一般公開用ホームページです。
 PC向けインディーゲームを企画・開発する個人スタジオの公式ページとして、GitHub Pagesで公開することを想定しています。
 

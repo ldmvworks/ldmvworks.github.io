@@ -14,7 +14,7 @@ secrets/
 *.pem
 *.p12
 
-# Sites build and local development
+# Local build and development
 node_modules/
 .next/
 .vinext/
